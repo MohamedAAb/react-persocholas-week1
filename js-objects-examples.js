@@ -13,3 +13,10 @@ const myInfo={
 
 console.log("myInfo in Json Format",myInfo);
 console.log("myInfo in StringFormat",JSON.stringify(myInfo));
+
+
+function sayHi(name){
+    return `my name is ${name}`;
+}
+
+console.log(sayHi("Mohamed"));
