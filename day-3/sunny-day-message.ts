@@ -1,7 +1,13 @@
 const SUNNY_DAY_MESSAGE: string="It is sunny today!";
-
 let isSunny:boolean=true;
+let numberSunnyDays:number=1;
 
+const getIfsunnyMessage=(isSunny)=>{
+  if(!isSunny){
+    return "not sunny";
+  }
+  return "sunny";
+}
 
 /***        Returns a string saying hi, if it's sunny, 
  * and how many days in a row it has been sunny for.
@@ -10,10 +16,8 @@ let isSunny:boolean=true;
 
 function sunnyDayMessage(isSunny: boolean, numberSunnyDays: number): string {
 
-    if(isSunny==true){
-        return`Hi! It is sunny today. It has been sunny for ${numberSunnyDays} days in a row. `
-    }
-    return "It's gloomy today! :(";
+    const sunnyMessage=getIfsunnyMessage(isSunny);
+    return `Hi! It is ${sunnyMessage}. It has been sunny for ${numberSunnyDays} days`;
   }
 
 console.log(sunnyDayMessage(true, 5));
